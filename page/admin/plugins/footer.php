@@ -9,7 +9,6 @@
 //MODALS
 include '../../modals/logout.php';
 include '../../modals/admin/player/player.php';
-
 ?>
 <!-- jQuery -->
 <!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->

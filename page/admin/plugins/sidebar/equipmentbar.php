@@ -36,7 +36,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="players.php" class="nav-link active">
+            <a href="players.php" class="nav-link ">
               <i class="fas fa-users"></i>
               <p>
                 List of Prospect Players
@@ -63,7 +63,7 @@
             </a>
           </li>
            <li class="nav-item">
-            <a href="equipment.php" class="nav-link ">
+            <a href="equipment.php" class="nav-link active">
               <i class="fas fa-box"></i>
               <p>
                 Equipment Management

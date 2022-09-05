@@ -90,4 +90,7 @@ if($role == 'admin'){
     </ul>
   </nav>
   <!-- /.navbar -->
-
+<?php
+include '../../modals/admin/player/update_players.php';
+include '../../modals/admin/equipment/add_equipment.php';
+?>

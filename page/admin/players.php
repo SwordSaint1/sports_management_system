@@ -62,6 +62,7 @@
                     <th>ID Number</th>
                     <th>Name</th>
                     <th>Age</th>
+                    <th>Gender</th>
                     <th>Weight</th>
                     <th>Height</th>
                     <th>Sports Playing</th>
