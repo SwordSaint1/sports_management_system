@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2022 at 10:22 AM
+-- Generation Time: Sep 05, 2022 at 12:51 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -20,6 +20,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `sports_management_system`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `equipments`
+--
+
+CREATE TABLE `equipments` (
+  `id` int(50) NOT NULL,
+  `equipment_name` varchar(100) DEFAULT NULL,
+  `quantity` varchar(10) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL,
+  `date_created` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `facilities`
+--
+
+CREATE TABLE `facilities` (
+  `id` int(50) NOT NULL,
+  `facility` varchar(100) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -49,7 +75,8 @@ CREATE TABLE `prospect_player_records` (
 --
 
 INSERT INTO `prospect_player_records` (`id`, `id_number`, `age`, `weight`, `gender`, `height`, `sports_playing`, `position`, `medical_conditions`, `injury`, `contact_no`, `address`, `contact_person_name`, `contact_person_contact_no`) VALUES
-(1, '21-07087', '25', '60', 'Male', '5,7', 'basketball', 'point guard', 'n/a', 'n/a', '09999999999', 'sample', 'sample', '09999999999');
+(1, '21-07087', '25', '60', 'Male', '5,7', 'basketball', 'point guard', 'n/a', 'n/a', '09999999999', 'sample', 'sample', '09999999999'),
+(2, '21-07088', '21', '1', 'Male', '1', 'a', 'a', 'a', 'a', '12312312312', 'as', 'asdasd', '12312312312');
 
 -- --------------------------------------------------------
 
@@ -81,6 +108,18 @@ INSERT INTO `user_accounts` (`id`, `Name`, `course`, `yr_section`, `id_number`, 
 --
 
 --
+-- Indexes for table `equipments`
+--
+ALTER TABLE `equipments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `facilities`
+--
+ALTER TABLE `facilities`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `prospect_player_records`
 --
 ALTER TABLE `prospect_player_records`
@@ -97,10 +136,22 @@ ALTER TABLE `user_accounts`
 --
 
 --
+-- AUTO_INCREMENT for table `equipments`
+--
+ALTER TABLE `equipments`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `facilities`
+--
+ALTER TABLE `facilities`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `prospect_player_records`
 --
 ALTER TABLE `prospect_player_records`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user_accounts`
