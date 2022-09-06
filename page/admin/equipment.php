@@ -9,13 +9,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">List of Equipments</h1>
+            <h1 class="m-0">Equipment Management</h1>
             <br>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-              <li class="breadcrumb-item active">List of Equipments</li>
+              <li class="breadcrumb-item active">Equipment Management</li>
             </ol>
           </div><!-- /.col -->
            <div class="col-sm-6">
@@ -47,7 +47,15 @@
                     <div class="col-3">
                     <label>Equipment Name:</label> <input type="text" name="equipment_name" id="equipment_name" class="form-control">
                     </div>
-                     <div class="col-9">
+                    <div class="col-3">
+                      <label>Equipment Status:</label>
+                      <select id="equipment_status" class="form-control">
+                        <option value="">Select Status</option>
+                        <option value="Available">Available</option>
+                        <option value="Not_Available">Not Available</option>
+                      </select>
+                    </div>
+                     <div class="col-6">
                       <span style="visibility:hidden;">.</span>
                       <p style="text-align:right;"><a href="#" class="btn btn-primary" onclick="load_equipments()">Search <i class="fa fa-search"></a></i></p>
                     </div>
@@ -62,6 +70,7 @@
                     <th>Equipment Name</th>
                     <th>Quantity</th>
                     <th>Status</th>
+                    <th>Date Created</th>
             </thead>
             <tbody id="list_of_equipments" style="text-align:center;"></tbody>
             </table>

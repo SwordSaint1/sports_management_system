@@ -66,7 +66,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="#" class="btn btn-info" onclick="register_player()">Add Player</a>
+        <a href="#" class="btn btn-info" onclick="register_player()">Register Player</a>
       </div>
     </div>
   </div>

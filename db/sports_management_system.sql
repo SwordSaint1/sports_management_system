@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2022 at 12:51 PM
+-- Generation Time: Sep 06, 2022 at 11:53 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -32,8 +32,19 @@ CREATE TABLE `equipments` (
   `equipment_name` varchar(100) DEFAULT NULL,
   `quantity` varchar(10) DEFAULT NULL,
   `status` varchar(20) DEFAULT NULL,
-  `date_created` varchar(20) DEFAULT NULL
+  `date_created` varchar(20) DEFAULT NULL,
+  `date_updated` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `equipments`
+--
+
+INSERT INTO `equipments` (`id`, `equipment_name`, `quantity`, `status`, `date_created`, `date_updated`) VALUES
+(1, 'sample', '52', 'Available', '2022-09-06', '2022-09-06'),
+(2, 'sample2', '51', 'Available', '2022-09-06', '2022-09-06'),
+(3, 'sample3', '51', 'Not_Available', '2022-09-06', '2022-09-06'),
+(4, 'equips', '51', 'Not_Available', '2022-09-06', '2022-09-06');
 
 -- --------------------------------------------------------
 
@@ -44,8 +55,17 @@ CREATE TABLE `equipments` (
 CREATE TABLE `facilities` (
   `id` int(50) NOT NULL,
   `facility` varchar(100) DEFAULT NULL,
-  `status` varchar(20) DEFAULT NULL
+  `status` varchar(20) DEFAULT NULL,
+  `date_created` varchar(20) DEFAULT NULL,
+  `date_updated` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `facilities`
+--
+
+INSERT INTO `facilities` (`id`, `facility`, `status`, `date_created`, `date_updated`) VALUES
+(1, 'sample', 'Available', '2022-09-06', '2022-09-06');
 
 -- --------------------------------------------------------
 
@@ -100,8 +120,9 @@ CREATE TABLE `user_accounts` (
 --
 
 INSERT INTO `user_accounts` (`id`, `Name`, `course`, `yr_section`, `id_number`, `email`, `password`, `role`) VALUES
-(1, 'jj', 'bsit', '4th', 'admin', 'admin@mail.com', 'admin', 'admin'),
-(2, 'jj', 'bsit', '4th', '21-07087', 'student@mail.com', 'admin', 'student');
+(1, 'jj', 'bsit', '4th', '21-07087', 'admin@mail.com', 'admin', 'admin'),
+(2, 'jj', 'bsit', '4th', 'requester', 'req@mail.com', 'admin', 'requester'),
+(4, 'asds', 'asd', 'asd', 'asd', 'asd', 'adsf', 'requester');
 
 --
 -- Indexes for dumped tables
@@ -139,13 +160,13 @@ ALTER TABLE `user_accounts`
 -- AUTO_INCREMENT for table `equipments`
 --
 ALTER TABLE `equipments`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `facilities`
 --
 ALTER TABLE `facilities`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `prospect_player_records`
@@ -157,7 +178,7 @@ ALTER TABLE `prospect_player_records`
 -- AUTO_INCREMENT for table `user_accounts`
 --
 ALTER TABLE `user_accounts`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

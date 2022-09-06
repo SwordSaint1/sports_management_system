@@ -4,15 +4,11 @@
  if (isset($_POST['login_btn'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    // $role = $_POST['role'];
     if (empty($username)) {
         echo 'Please Enter Username';
     }else if(empty($password)){
         echo 'Please Enter Password';
     }
-    // else if(empty($role)){
-    //     echo 'Please Select Role';
-    // }
     else
 {
         $check = "SELECT id,role FROM user_accounts WHERE BINARY email = '$username' AND BINARY password = '$password'";
@@ -23,9 +19,9 @@
             foreach($stmt->fetchALL() as $x){
                 $role = $x['role'];
             }
-            if($role == 'student'){
+            if($role == 'requester'){
                 $_SESSION['username'] = $username;
-                header('location: page/student/dashboard.php');
+                header('location: page/requester/dashboard.php');
             }else if($role == 'admin'){
                 $_SESSION['username'] = $username;
                 header('location: page/admin/dashboard.php');    

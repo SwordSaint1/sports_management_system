@@ -1,5 +1,5 @@
 <?php include 'plugins/navbar.php';?>
-<?php include 'plugins/sidebar/accountbar.php';?>
+<?php include 'plugins/sidebar/equipmentbar.php';?>
   <!-- Main Sidebar Container -->
 
  <!-- Content Wrapper. Contains page content -->
@@ -9,20 +9,15 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Account Management</h1>
+            <h1 class="m-0">List of Available Equipments</h1>
             <br>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-              <li class="breadcrumb-item active">Account Management</li>
+              <li class="breadcrumb-item active">List of Available Equipments</li>
             </ol>
           </div><!-- /.col -->
-           <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-left">
-             <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#add_acc">Add Account</a>
-            </ol>
-          </div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
@@ -45,25 +40,19 @@
                 <div class="card-body">
                    <div class="row">
                     <div class="col-3">
-                    <label>ID Number:</label> <input type="text" name="id_number" id="id_number" class="form-control">
+                    <label>Equipment Name:</label> <input type="text" name="equipment_name" id="equipment_name" class="form-control">
                     </div>
                     <div class="col-3">
-                    <label>Name:</label> <input type="text" name="name" id="name" class="form-control">
-                    </div>
-                    <div class="col-2">
-                      <label>Course:</label> <input type="text" name="course" id="course" class="form-control">
-                    </div>
-                    <div class="col-2">
-                      <label>User Type:</label>
-                      <select id="user_type" class="form-control">
-                        <option value="">Select User Type</option>
-                        <option value="admin">Admin</option>
-                        <option value="student">Student</option>
+                      <label>Equipment Status:</label>
+                      <select id="equipment_status" class="form-control">
+                        <option value="">Select Status</option>
+                        <option value="Available">Available</option>
+                        <option value="Not_Available">Not Available</option>
                       </select>
                     </div>
-                     <div class="col-2">
+                     <div class="col-6">
                       <span style="visibility:hidden;">.</span>
-                      <p style="text-align:right;"><a href="#" class="btn btn-primary" onclick="load_accounts()">Search <i class="fa fa-search"></a></i></p>
+                      <p style="text-align:right;"><a href="#" class="btn btn-primary" onclick="load_equipments()">Search <i class="fa fa-search"></a></i></p>
                     </div>
                   </div>
                   <br>
@@ -73,14 +62,12 @@
                 <table class="table table-head-fixed text-nowrap table-hover" id="">
                 <thead style="text-align:center;">
                     <th>#</th>
-                    <th>ID Number</th>
-                    <th>Name</th>
-                    <th>Course</th>
-                    <th>Year/Section</th>
-                    <th>Email</th>
-                    <th>User Type</th>
+                    <th>Equipment Name</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Date Created</th>
             </thead>
-            <tbody id="list_of_accounts" style="text-align:center;"></tbody>
+            <tbody id="list_of_equipments" style="text-align:center;"></tbody>
             </table>
              <div class="row">
                   <div class="col-6">
@@ -114,4 +101,4 @@
 </div>
 
 <?php include 'plugins/footer.php';?>
-<?php include 'plugins/javascript/account_script.php';?>
+<?php include 'plugins/javascript/equipment_script.php';?>

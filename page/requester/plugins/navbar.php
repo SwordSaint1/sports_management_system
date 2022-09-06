@@ -1,7 +1,7 @@
 <?php 
 //SESSION
 include '../../process/session.php';
-if($role == 'admin'){
+if($role == 'requester'){
         // DO NOTHING
     }else{
         session_unset();
@@ -16,7 +16,7 @@ if($role == 'admin'){
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sports Management System | Admin</title>
+  <title>Sports Management System | Requester</title>
 
   <link rel="icon" href="../../dist/img/logo.png" type="image/x-icon" />
   <!-- Google Font: Source Sans Pro -->
