@@ -98,4 +98,5 @@ include '../../modals/admin/facility/add_facility.php';
 include '../../modals/admin/facility/update_facility.php';
 include '../../modals/admin/account/add_account.php';
 include '../../modals/admin/account/update_account.php';
+include '../../modals/admin/request/pending.php';
 ?>

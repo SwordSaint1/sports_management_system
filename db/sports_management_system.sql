@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2022 at 11:53 AM
+-- Generation Time: Sep 08, 2022 at 10:46 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -20,6 +20,70 @@ SET time_zone = "+00:00";
 --
 -- Database: `sports_management_system`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `borrowed_equipments`
+--
+
+CREATE TABLE `borrowed_equipments` (
+  `id` int(50) NOT NULL,
+  `equipment` varchar(255) DEFAULT NULL,
+  `quantity` varchar(10) DEFAULT NULL,
+  `id_number` varchar(50) DEFAULT NULL,
+  `borrowed_date` varchar(20) DEFAULT NULL,
+  `time_from` varchar(20) DEFAULT NULL,
+  `time_to` varchar(20) DEFAULT NULL,
+  `facility` varchar(20) DEFAULT NULL,
+  `purpose` varchar(255) DEFAULT NULL,
+  `borrow_code` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `borrowed_equipments`
+--
+
+INSERT INTO `borrowed_equipments` (`id`, `equipment`, `quantity`, `id_number`, `borrowed_date`, `time_from`, `time_to`, `facility`, `purpose`, `borrow_code`) VALUES
+(1, 'sample', '1', 'requester', '2022-09-08', '11:48', '11:50', 'sample', 'asd', 'BC:22090811303'),
+(2, 'sample', '1', 'requester', '2022-09-08', '11:48', '11:50', 'sample', 'asd', 'BC:22090811303'),
+(3, 'sample2', '1', 'requester', '2022-09-08', '11:48', '11:50', 'sample', 'asd', 'BC:22090811303'),
+(4, 'sample2', '1', 'requester', '2022-09-08', '11:48', '11:50', 'sample', 'asd', 'BC:22090811303'),
+(5, 'sample', '1', 'try', '2022-09-08', '15:38', '15:40', 'sample', 'sample', 'BC:22090841610'),
+(6, 'sample', '1', 'try', '2022-09-08', '15:38', '15:40', 'sample', 'sample', 'BC:22090841610'),
+(7, 'sample', '1', 'try', '2022-09-08', '15:38', '15:40', 'sample', 'sample', 'BC:22090841610'),
+(8, 'sample', '1', 'try', '2022-09-08', '16:28', '16:30', 'sample2', 'sample3', 'BC:22090848641'),
+(9, 'sample', '1', 'try', '2022-09-08', '16:28', '16:30', 'sample2', 'sample3', 'BC:22090848641');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `borrow_list`
+--
+
+CREATE TABLE `borrow_list` (
+  `id` int(50) NOT NULL,
+  `id_number` varchar(50) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `borrowed_date` varchar(20) DEFAULT NULL,
+  `time_from` varchar(20) DEFAULT NULL,
+  `time_to` varchar(20) DEFAULT NULL,
+  `returned_date` varchar(20) DEFAULT NULL,
+  `returned_time` varchar(255) DEFAULT NULL,
+  `facility` varchar(255) DEFAULT NULL,
+  `purpose` varchar(255) DEFAULT NULL,
+  `borrowing_code` varchar(50) DEFAULT NULL,
+  `status` varchar(20) DEFAULT 'Pending'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `borrow_list`
+--
+
+INSERT INTO `borrow_list` (`id`, `id_number`, `name`, `borrowed_date`, `time_from`, `time_to`, `returned_date`, `returned_time`, `facility`, `purpose`, `borrowing_code`, `status`) VALUES
+(1, 'requester', 'jj', '2022-09-08', '11:48', '11:50', '2022-09-08', '11:48', 'sample', 'asd', 'BC:22090811303', 'Approved'),
+(2, 'try', 'try', '2022-09-08', '15:38', '15:40', '2022-09-08', '15:43', 'sample', 'sample', 'BC:22090841610', 'Dis-Approved'),
+(3, 'try', 'try', '2022-09-08', '16:28', '16:30', '2022-09-08', '16:28', 'sample2', 'sample3', 'BC:22090848641', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -41,8 +105,8 @@ CREATE TABLE `equipments` (
 --
 
 INSERT INTO `equipments` (`id`, `equipment_name`, `quantity`, `status`, `date_created`, `date_updated`) VALUES
-(1, 'sample', '52', 'Available', '2022-09-06', '2022-09-06'),
-(2, 'sample2', '51', 'Available', '2022-09-06', '2022-09-06'),
+(1, 'sample', '44', 'Available', '2022-09-06', '2022-09-06'),
+(2, 'sample2', '43', 'Available', '2022-09-06', '2022-09-06'),
 (3, 'sample3', '51', 'Not_Available', '2022-09-06', '2022-09-06'),
 (4, 'equips', '51', 'Not_Available', '2022-09-06', '2022-09-06');
 
@@ -65,7 +129,8 @@ CREATE TABLE `facilities` (
 --
 
 INSERT INTO `facilities` (`id`, `facility`, `status`, `date_created`, `date_updated`) VALUES
-(1, 'sample', 'Available', '2022-09-06', '2022-09-06');
+(1, 'sample', 'Not_Available', '2022-09-06', '2022-09-08'),
+(2, 'sample2', 'Available', '2022-09-06', NULL);
 
 -- --------------------------------------------------------
 
@@ -122,11 +187,23 @@ CREATE TABLE `user_accounts` (
 INSERT INTO `user_accounts` (`id`, `Name`, `course`, `yr_section`, `id_number`, `email`, `password`, `role`) VALUES
 (1, 'jj', 'bsit', '4th', '21-07087', 'admin@mail.com', 'admin', 'admin'),
 (2, 'jj', 'bsit', '4th', 'requester', 'req@mail.com', 'admin', 'requester'),
-(4, 'asds', 'asd', 'asd', 'asd', 'asd', 'adsf', 'requester');
+(4, 'try', 'try', 'try', 'try', 'try@mail.com', 'admin', 'requester');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `borrowed_equipments`
+--
+ALTER TABLE `borrowed_equipments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `borrow_list`
+--
+ALTER TABLE `borrow_list`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `equipments`
@@ -157,6 +234,18 @@ ALTER TABLE `user_accounts`
 --
 
 --
+-- AUTO_INCREMENT for table `borrowed_equipments`
+--
+ALTER TABLE `borrowed_equipments`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `borrow_list`
+--
+ALTER TABLE `borrow_list`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `equipments`
 --
 ALTER TABLE `equipments`
@@ -166,7 +255,7 @@ ALTER TABLE `equipments`
 -- AUTO_INCREMENT for table `facilities`
 --
 ALTER TABLE `facilities`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `prospect_player_records`

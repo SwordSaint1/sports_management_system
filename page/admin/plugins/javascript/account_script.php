@@ -91,16 +91,17 @@ const register_account =()=>{
 
 const get_account_details =(param)=>{
 	var string = param.split('~!~');
-  	var id = string[0];
-	var Name = string[1];
-	var course = string[2];
-	var yr_section = string[3];
-	var id_number = string[4];
-	var email = string[5];
-	var password = string[6];
-	var role = string[7];
+    var id = string[0];
+    var Name = string[1];
+    var course = string[2];
+    var yr_section = string[3];
+    var id_number = string[4];
+    var email = string[5];
+    var password = string[6];
+    var role = string[7];
+  	
 	
-document.getElementById('id_acc_update').value = id;
+document.getElementById('id_pending_admin').value = id;
 document.getElementById('name_update').value = Name;
 document.getElementById('course_update').value = course;
 document.getElementById('year_update').value = yr_section;

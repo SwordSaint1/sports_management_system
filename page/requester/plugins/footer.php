@@ -8,7 +8,7 @@
 <?php
 //MODALS
 include '../../modals/logout.php';
-include '../../modals/admin/player/player.php';
+include '../../modals/requester/borrow/borrow.php';
 ?>
 <!-- jQuery -->
 <!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->

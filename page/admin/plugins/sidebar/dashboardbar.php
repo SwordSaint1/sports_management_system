@@ -45,10 +45,28 @@
             </a>
           </li>
            <li class="nav-item">
+            <a href="pending.php" class="nav-link">
+              <i class="fas fa-hourglass-start"></i>
+              <p>
+                List of Pending Items
+               
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
             <a href="acquired.php" class="nav-link">
               <i class="fas fa-hand-holding"></i>
               <p>
-                List of Acquired Items
+                List of Borrowed Items
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="acquired.php" class="nav-link">
+              <i class="fas fa-window-close"></i>
+              <p>
+                List of Rejected Items
                
               </p>
             </a>

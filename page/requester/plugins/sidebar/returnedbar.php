@@ -36,76 +36,63 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="players.php" class="nav-link active">
+            <a href="facility.php" class="nav-link ">
               <i class="fas fa-users"></i>
               <p>
-                List of Prospect Players
-               
-              </p>
-            </a>
-          </li>
-         <li class="nav-item">
-            <a href="pending.php" class="nav-link">
-              <i class="fas fa-hourglass-start"></i>
-              <p>
-                List of Pending Items
-               
-              </p>
-            </a>
-          </li>
-           <li class="nav-item">
-            <a href="acquired.php" class="nav-link">
-              <i class="fas fa-hand-holding"></i>
-              <p>
-                List of Borrowed Items
-               
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="acquired.php" class="nav-link">
-              <i class="fas fa-window-close"></i>
-              <p>
-                List of Rejected Items
-               
-              </p>
-            </a>
-          </li>
-           <li class="nav-item">
-            <a href="returned.php" class="nav-link">
-              <i class="fas fa-handshake"></i>
-              <p>
-                List of Returned Items
+                List of Facilities
                
               </p>
             </a>
           </li>
            <li class="nav-item">
             <a href="equipment.php" class="nav-link ">
-              <i class="fas fa-box"></i>
+              <i class="fas fa-users"></i>
               <p>
-                Equipment Management
+                List of Equipments
                
               </p>
             </a>
           </li>
-           <li class="nav-item">
-            <a href="facilities.php" class="nav-link">
-              <i class="fas fa-university"></i>
+           <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="fa fa-edit"></i>
               <p>
-                Facilities Management
-               
+                Request
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          </li>
-           <li class="nav-item">
-            <a href="account.php" class="nav-link">
-              <i class="fas fa-user-cog"></i>
-              <p>
-                Account Management
-               
-              </p>
-            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="borrow.php" class="nav-link ">
+                  <i class="far fa-dot-circle nav-icon"></i>
+                  <p>Borrow</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pending.php" class="nav-link ">
+                  <i class="far fa-dot-circle nav-icon"></i>
+                  <p>List of Pending</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="approved.php" class="nav-link ">
+                  <i class="far fa-dot-circle nav-icon"></i>
+                  <p>List of Approved</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="disapproved.php" class="nav-link ">
+                  <i class="far fa-dot-circle nav-icon"></i>
+                  <p>List of Dis-Approved</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="returned.php" class="nav-link active">
+                  <i class="far fa-dot-circle nav-icon"></i>
+                  <p>List of Returned</p>
+                </a>
+              </li>
+            </ul>
           </li>
           </li>  
          <?php include 'logout.php' ;?>

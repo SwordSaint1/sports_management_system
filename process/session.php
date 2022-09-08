@@ -11,6 +11,7 @@
 			foreach($stmt->fetchALL() as $i){
 				$name = $i['Name'];
 				$role = $i['role'];
+				$id_number = $i['id_number'];
 			}
 		}else{
 			session_unset();

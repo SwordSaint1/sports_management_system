@@ -1,5 +1,5 @@
 <?php include 'plugins/navbar.php';?>
-<?php include 'plugins/sidebar/returnedbar.php';?>
+<?php include 'plugins/sidebar/pendingbar.php';?>
   <!-- Main Sidebar Container -->
 
  <!-- Content Wrapper. Contains page content -->
@@ -9,13 +9,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">List of Returned Items</h1>
+            <h1 class="m-0">List of Pending</h1>
             <br>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-              <li class="breadcrumb-item active">List of Returned Items</li>
+              <li class="breadcrumb-item active">List of Pending</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -40,11 +40,11 @@
                 <div class="card-body">
                    <div class="row">
                     <div class="col-3">
-                    <label>Facility Name:</label> <input type="text" name="facility_name_returned_admin" id="facility_name_returned_admin" class="form-control">
+                    <label>Facility Name:</label> <input type="text" name="facility_name_pending_admin" id="facility_name_pending_admin" class="form-control">
                     </div>
                      <div class="col-9">
                       <span style="visibility:hidden;">.</span>
-                      <p style="text-align:right;"><a href="#" class="btn btn-primary" onclick="load_returned()">Search <i class="fa fa-search"></a></i></p>
+                      <p style="text-align:right;"><a href="#" class="btn btn-primary" onclick="load_pending()">Search <i class="fa fa-search"></a></i></p>
                     </div>
                   </div>
                   <br>
@@ -64,7 +64,7 @@
                     <th>Returned Time</th>
                     <th>Status</th>
             </thead>
-            <tbody id="list_of_returned_admin" style="text-align:center;"></tbody>
+            <tbody id="list_of_pending_admin" style="text-align:center;"></tbody>
             </table>
              <div class="row">
                   <div class="col-6">
@@ -98,4 +98,4 @@
 </div>
 
 <?php include 'plugins/footer.php';?>
-<?php include 'plugins/javascript/returned_script.php';?>
+<?php include 'plugins/javascript/pending_script.php';?>

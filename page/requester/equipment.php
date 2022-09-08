@@ -42,15 +42,7 @@
                     <div class="col-3">
                     <label>Equipment Name:</label> <input type="text" name="equipment_name" id="equipment_name" class="form-control">
                     </div>
-                    <div class="col-3">
-                      <label>Equipment Status:</label>
-                      <select id="equipment_status" class="form-control">
-                        <option value="">Select Status</option>
-                        <option value="Available">Available</option>
-                        <option value="Not_Available">Not Available</option>
-                      </select>
-                    </div>
-                     <div class="col-6">
+                     <div class="col-9">
                       <span style="visibility:hidden;">.</span>
                       <p style="text-align:right;"><a href="#" class="btn btn-primary" onclick="load_equipments()">Search <i class="fa fa-search"></a></i></p>
                     </div>
@@ -65,7 +57,6 @@
                     <th>Equipment Name</th>
                     <th>Quantity</th>
                     <th>Status</th>
-                    <th>Date Created</th>
             </thead>
             <tbody id="list_of_equipments" style="text-align:center;"></tbody>
             </table>

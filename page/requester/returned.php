@@ -9,13 +9,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">List of Returned Items</h1>
+            <h1 class="m-0">List of Returned</h1>
             <br>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-              <li class="breadcrumb-item active">List of Returned Items</li>
+              <li class="breadcrumb-item active">List of Returned</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -37,10 +37,11 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form>
+                <input type="hidden" name="id_num_returned" id="id_num_returned" value="<?=$id_number;?>">
                 <div class="card-body">
                    <div class="row">
                     <div class="col-3">
-                    <label>Facility Name:</label> <input type="text" name="facility_name_returned_admin" id="facility_name_returned_admin" class="form-control">
+                    <label>Facility Name:</label> <input type="text" name="facility_name_returned_req" id="facility_name_returned_req" class="form-control">
                     </div>
                      <div class="col-9">
                       <span style="visibility:hidden;">.</span>
@@ -64,7 +65,7 @@
                     <th>Returned Time</th>
                     <th>Status</th>
             </thead>
-            <tbody id="list_of_returned_admin" style="text-align:center;"></tbody>
+            <tbody id="list_of_returned_req" style="text-align:center;"></tbody>
             </table>
              <div class="row">
                   <div class="col-6">

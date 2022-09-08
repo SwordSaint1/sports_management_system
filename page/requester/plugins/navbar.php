@@ -90,12 +90,3 @@ if($role == 'requester'){
     </ul>
   </nav>
   <!-- /.navbar -->
-<?php
-include '../../modals/admin/player/update_players.php';
-include '../../modals/admin/equipment/add_equipment.php';
-include '../../modals/admin/equipment/update_equipment.php';
-include '../../modals/admin/facility/add_facility.php';
-include '../../modals/admin/facility/update_facility.php';
-include '../../modals/admin/account/add_account.php';
-include '../../modals/admin/account/update_account.php';
-?>

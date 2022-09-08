@@ -36,7 +36,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="players.php" class="nav-link active">
+            <a href="players.php" class="nav-link ">
               <i class="fas fa-users"></i>
               <p>
                 List of Prospect Players
@@ -44,8 +44,8 @@
               </p>
             </a>
           </li>
-         <li class="nav-item">
-            <a href="pending.php" class="nav-link">
+            <li class="nav-item">
+            <a href="pending.php" class="nav-link ">
               <i class="fas fa-hourglass-start"></i>
               <p>
                 List of Pending Items
@@ -54,7 +54,7 @@
             </a>
           </li>
            <li class="nav-item">
-            <a href="acquired.php" class="nav-link">
+            <a href="acquired.php" class="nav-link active">
               <i class="fas fa-hand-holding"></i>
               <p>
                 List of Borrowed Items
@@ -63,7 +63,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="acquired.php" class="nav-link">
+            <a href="reject.php" class="nav-link">
               <i class="fas fa-window-close"></i>
               <p>
                 List of Rejected Items
