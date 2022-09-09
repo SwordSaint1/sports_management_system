@@ -50,5 +50,47 @@ if ($method == 'prev_equips') {
 		}
 	}
 }
+
+
+if ($method == 'returned') {
+	$id = $_POST['id'];
+	$borrowing_code = $_POST['borrowing_code'];
+	$facility = $_POST['facility'];
+
+	$query = "UPDATE borrow_list SET status = 'Returned' WHERE id = '$id'";
+	$stmt = $conn->prepare($query);
+	if ($stmt->execute()) {
+		$stmt = NULL;
+
+		$query = "UPDATE facilities SET status = 'Available', date_updated = '$server_date_only' WHERE facility = '$facility'";
+		$stmt = $conn->prepare($query);
+		if ($stmt->execute()) {
+			$stmt = NULL;
+
+			$query = "SELECT equipment,SUM(quantity) AS TOTAL FROM borrowed_equipments WHERE borrow_code = '$borrowing_code' GROUP BY equipment";
+			$stmt = $conn->prepare($query);
+			$stmt->execute();
+			foreach($stmt->fetchALL() as $j){
+				 $equipment = $j['equipment'];
+				 $total = $j['TOTAL'];
+				$stmt = NULL;
+
+				$query = "UPDATE equipments SET quantity = quantity + $total WHERE equipment_name = '$equipment'";
+				$stmt = $conn->prepare($query);
+				if ($stmt->execute()) {
+					echo 'success';
+				}else{
+					echo 'error';
+				}
+			}
+
+		}else{
+			echo 'error';
+		}
+
+	}else{
+		echo 'error';
+	}
+}
 $conn = NULL;
 ?>
