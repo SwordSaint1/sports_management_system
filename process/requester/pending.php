@@ -13,7 +13,7 @@ if ($method == 'fetch_pending') {
 	if ($stmt->rowCount() > 0) {
 		foreach($stmt->fetchALL() as $j){
 			$c++;
-			echo '<tr>';
+			echo '<tr style="cursor:pointer;" class="modal-trigger" data-toggle="modal" data-target="#req_pending" onclick="get_req_pending_details(&quot;'.$j['id'].'~!~'.$j['id_number'].'~!~'.$j['name'].'~!~'.$j['borrowed_date'].'~!~'.$j['time_from'].'~!~'.$j['time_to'].'~!~'.$j['returned_date'].'~!~'.$j['returned_time'].'~!~'.$j['facility'].'~!~'.$j['purpose'].'~!~'.$j['borrowing_code'].'~!~'.$j['status'].'&quot;)">';
 				echo '<td>'.$c.'</td>';
 				echo '<td>'.$j['borrowing_code'].'</td>';
 				echo '<td>'.$j['borrowed_date'].'</td>';
@@ -31,7 +31,26 @@ if ($method == 'fetch_pending') {
 				echo '<td colspan="10" style="color:red;">No Result!<td>';
 			echo '</tr>';
 	}
-}
+} 
 
+
+if ($method == 'prev_equips') {
+	$code = $_POST['code'];
+	$c = 0;
+
+	$query = "SELECT equipment,SUM(quantity) AS TOTAL FROM borrowed_equipments WHERE borrow_code = '$code' GROUP BY equipment";
+	$stmt = $conn->prepare($query);
+	$stmt->execute();
+	if ($stmt->rowCount() > 0) {
+		foreach($stmt->fetchALL() as $j){
+			$c++;
+			echo '<tr>';
+				echo '<td>'.$c.'</td>';
+				echo '<td>'.$j['equipment'].'</td>';
+				echo '<td>'.$j['TOTAL'].'</td>';
+			echo '<tr>';
+		}
+	}
+}
 $conn = NULL;
 ?>

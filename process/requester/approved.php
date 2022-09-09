@@ -13,7 +13,7 @@ if ($method == 'fetch_approved') {
 	if ($stmt->rowCount() > 0) {
 		foreach($stmt->fetchALL() as $j){
 			$c++;
-			echo '<tr>';
+			echo '<tr style="cursor:pointer;" class="modal-trigger" data-toggle="modal" data-target="#req_pending" onclick="get_req_pending_details(&quot;'.$j['id'].'~!~'.$j['id_number'].'~!~'.$j['name'].'~!~'.$j['borrowed_date'].'~!~'.$j['time_from'].'~!~'.$j['time_to'].'~!~'.$j['returned_date'].'~!~'.$j['returned_time'].'~!~'.$j['facility'].'~!~'.$j['purpose'].'~!~'.$j['borrowing_code'].'~!~'.$j['status'].'&quot;)">';
 				echo '<td>'.$c.'</td>';
 				echo '<td>'.$j['borrowing_code'].'</td>';
 				echo '<td>'.$j['borrowed_date'].'</td>';

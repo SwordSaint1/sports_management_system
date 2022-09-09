@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2022 at 10:46 AM
+-- Generation Time: Sep 09, 2022 at 07:40 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -83,7 +83,7 @@ CREATE TABLE `borrow_list` (
 INSERT INTO `borrow_list` (`id`, `id_number`, `name`, `borrowed_date`, `time_from`, `time_to`, `returned_date`, `returned_time`, `facility`, `purpose`, `borrowing_code`, `status`) VALUES
 (1, 'requester', 'jj', '2022-09-08', '11:48', '11:50', '2022-09-08', '11:48', 'sample', 'asd', 'BC:22090811303', 'Approved'),
 (2, 'try', 'try', '2022-09-08', '15:38', '15:40', '2022-09-08', '15:43', 'sample', 'sample', 'BC:22090841610', 'Dis-Approved'),
-(3, 'try', 'try', '2022-09-08', '16:28', '16:30', '2022-09-08', '16:28', 'sample2', 'sample3', 'BC:22090848641', 'Pending');
+(3, 'try', 'try', '2022-09-08', '16:28', '16:30', '2022-09-08', '16:28', 'sample2', 'sample3', 'BC:22090848641', 'Returned');
 
 -- --------------------------------------------------------
 
@@ -105,10 +105,17 @@ CREATE TABLE `equipments` (
 --
 
 INSERT INTO `equipments` (`id`, `equipment_name`, `quantity`, `status`, `date_created`, `date_updated`) VALUES
-(1, 'sample', '44', 'Available', '2022-09-06', '2022-09-06'),
-(2, 'sample2', '43', 'Available', '2022-09-06', '2022-09-06'),
-(3, 'sample3', '51', 'Not_Available', '2022-09-06', '2022-09-06'),
-(4, 'equips', '51', 'Not_Available', '2022-09-06', '2022-09-06');
+(1, 'a', '1', 'Available', '2022-09-09', NULL),
+(2, 'b', '2', 'Available', '2022-09-09', NULL),
+(3, 'c', '3', 'Available', '2022-09-09', NULL),
+(4, 'd', '4', 'Available', '2022-09-09', NULL),
+(5, 'e', '5', 'Available', '2022-09-09', NULL),
+(6, 'f', '6', 'Available', '2022-09-09', NULL),
+(7, 'g', '7', 'Available', '2022-09-09', NULL),
+(8, 'h', '8', 'Available', '2022-09-09', NULL),
+(9, 'i', '9', 'Available', '2022-09-09', NULL),
+(10, 'j', '10', 'Available', '2022-09-09', NULL),
+(11, 'k', '11', 'Available', '2022-09-09', NULL);
 
 -- --------------------------------------------------------
 
@@ -249,7 +256,7 @@ ALTER TABLE `borrow_list`
 -- AUTO_INCREMENT for table `equipments`
 --
 ALTER TABLE `equipments`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `facilities`

@@ -72,7 +72,7 @@
               <option value="">Select Equipment</option>
               <?php 
               include '../../conn.php';
-              $query = "SELECT DISTINCT equipment_name FROM equipments WHERE status = 'Available'";
+              $query = "SELECT DISTINCT equipment_name FROM equipments WHERE status = 'Available' AND quantity > 0";
               $stmt = $conn->prepare($query);
               if ($stmt->execute()) {
                   foreach($stmt->fetchALL() as $j){

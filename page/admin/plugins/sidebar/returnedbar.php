@@ -35,8 +35,43 @@
               </p>
             </a>
           </li>
+           <li class="nav-item menu-close">
+            <a href="#" class="nav-link">
+              <i class="fas fa-chart-bar"></i>
+              <p>
+                Graphs
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="topequips.php" class="nav-link ">
+                  <i class="far fa-dot-circle nav-icon"></i>
+                  <p>Borrowed Equipment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="topborrowers.php" class="nav-link ">
+                  <i class="far fa-dot-circle nav-icon"></i>
+                  <p>Top 10 Borrowers</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="equipment_chart.php" class="nav-link">
+                  <i class="far fa-dot-circle nav-icon"></i>
+                  <p>Equipment</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="request_chart.php" class="nav-link">
+                  <i class="far fa-dot-circle nav-icon"></i>
+                  <p>Request</p>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item">
-            <a href="players.php" class="nav-link ">
+            <a href="players.php" class="nav-link">
               <i class="fas fa-users"></i>
               <p>
                 List of Prospect Players
@@ -44,7 +79,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+           <li class="nav-item">
             <a href="pending.php" class="nav-link">
               <i class="fas fa-hourglass-start"></i>
               <p>
@@ -63,7 +98,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="acquired.php" class="nav-link ">
+            <a href="reject.php" class="nav-link">
               <i class="fas fa-window-close"></i>
               <p>
                 List of Rejected Items
@@ -90,7 +125,7 @@
             </a>
           </li>
            <li class="nav-item">
-            <a href="facilities.php" class="nav-link">
+            <a href="facilities.php" class="nav-link ">
               <i class="fas fa-university"></i>
               <p>
                 Facilities Management
@@ -99,7 +134,7 @@
             </a>
           </li>
            <li class="nav-item">
-            <a href="account.php" class="nav-link">
+            <a href="account.php" class="nav-link ">
               <i class="fas fa-user-cog"></i>
               <p>
                 Account Management

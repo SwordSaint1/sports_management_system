@@ -9,6 +9,7 @@
 //MODALS
 include '../../modals/logout.php';
 include '../../modals/requester/borrow/borrow.php';
+include '../../modals/requester/borrow/pending.php';
 ?>
 <!-- jQuery -->
 <!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->
